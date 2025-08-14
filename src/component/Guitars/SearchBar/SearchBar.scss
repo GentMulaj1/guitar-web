@@ -1,0 +1,146 @@
+.SearchBar {
+    width: max(400px, 24.25vw);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+        z-index: 4;
+    background-color: #fff;
+
+     .SearchBar__first {
+        width: max(400px, 24.25vw);
+        height: max(74px, 3.7vw);
+        border: 1px solid rgba(208, 208, 208, 1);
+        transition: all 0.1s ease-in-out;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        padding-left: max(16px, 0.8vw);
+        padding-right: max(16px, 0.8vw);
+        position: relative;
+
+        .SearchBar__icon {
+            width: max(24px, 1.2vw);
+            content: url('../../../assets/Guitars/Selection/search.svg');
+            z-index: 2;
+        }
+
+        input {
+            outline: none;
+            height: 100%;
+            width: 100%;
+            margin-left: max(16px, 0.8vw);
+            color: rgba(184, 184, 192, 1);
+            border: none;
+
+            &::placeholder {
+                color: rgba(184, 184, 192, 1);
+            text-align: center;
+
+            }
+
+        }
+
+        p {
+            color: rgba(184, 184, 192, 1);
+        }
+
+
+        &:focus-within {
+            border-color: rgba(255, 140, 96, 1);
+
+            input {
+                 &::placeholder {
+                    color: rgba(255, 140, 96, 1);
+                }
+            }
+        }
+
+    }
+
+    .noresults {
+            color: rgba(184, 184, 192, 1);
+        text-align: center;
+        padding: max(16px, 0.8vw);
+    }
+
+
+
+
+
+    .SearchBar__results {
+        width: 100%;
+        border-radius: max(5px, 0.25vw);
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+
+        border: 1px solid rgba(0,0,0, 0.1);
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+
+        .SearchBar__result {
+            color: rgba(146, 146, 163, 1);
+            background-color: #fff;
+                padding: max(16px, 0.8vw) max(16px, 0.8vw);
+                cursor: pointer;
+                padding-left: max(34px, 1.55vw);
+                text-align: center;
+
+
+            &:hover {
+                color: rgba(255, 140, 96, 1);
+                background-color: rgba(255, 239, 233, 1);
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+@media (max-width: 576px) {
+    .SearchBar {
+        width: max(150px, 10vw);
+
+        .SearchBar__first {
+            height: max(50px, 2.5vw);
+            padding: max(5px, 0.25vw);
+
+            .SearchBar__icon {
+                scale: 0.6;
+                display: none;
+            }
+
+            input {
+                margin-left: 0;
+            }
+
+            .cc28 {
+                font-size: max(12px, 0.6vw);
+            }
+
+            .SearchBar__arrow {
+                scale: 0.5;
+            }
+        }
+
+        .SearchBar__results {
+            .SearchBar__result {
+                padding: max(16px, 0.8vw) max(5px, 0.25vw);
+                text-align: start;
+            }
+            .cc26 {
+                font-size: max(12px, 0.6vw);
+            }
+        }
+    }
+}

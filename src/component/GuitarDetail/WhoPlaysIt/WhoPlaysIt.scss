@@ -1,0 +1,83 @@
+.WhoPlaysIt {
+    padding: 0 max(20px, 10vw);
+
+    display: flex;
+    flex-direction: column;
+
+    .WhoPlaysIt__cards {
+        display: flex;
+        gap: max(43px, 2.15vw);
+        justify-content: center;
+
+
+        .WhoPlaysIt__card {
+            display: flex;
+            flex-direction: column;
+            gap: max(25px, 1.25vw);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: max(24px, 1.2vw);
+            background-color: rgba(255, 236, 236, 1);
+            cursor: pointer;
+
+            .WhoPlaysIt__card__image {
+                width: 100%;
+                aspect-ratio: 1/1;
+                content: url('../../../assets/shared/who1.png');
+            }
+
+            .WhoPlaysIt__card__name{
+                color: rgba(102, 102, 102, 1);
+                
+                @media (max-width: 450px) {
+                    font-size: max(14px, 0.7vw);
+                    
+                }
+            }
+        }
+
+    }
+
+
+
+     .WhoPlaysIt__dots {
+        margin: 0 auto;
+        margin-top: max(50px, 2.5vw);
+        display: flex;
+        align-items: flex-end;
+        gap: max(10px, 0.5vw);
+        
+
+
+    .dot {
+      width: max(14px, 0.7vw);
+      height: max(14px, 0.7vw);
+      background-color: rgba(217, 217, 217, 1);
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+   width: max(24px, 1.2vw);
+      height: max(24px, 1.2vw);
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    .WhoPlaysIt {
+    padding: 0 max(20px, 1vw);
+
+    .WhoPlaysIt__cards {
+        gap: max(20px, 1vw);
+
+        .WhoPlaysIt__card {
+            padding: max(5px, 0.25vw) max(5px, 0.25vw) max(12px, 0.6vw) max(5px, 0.25vw);
+        }
+    }
+    }
+}

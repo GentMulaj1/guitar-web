@@ -1,0 +1,127 @@
+.RockStar {
+  display: flex;
+  gap: max(50px, 2.5vw);
+  position: relative;
+
+  .Guitars__left {
+    width: 50%;
+    padding-top: max(62px, 3.1vw);
+    padding-left: max(20px, 6vw);
+    display: flex;
+    flex-direction: column;
+    gap: max(141px, 7vw);
+
+    .Guitars__left__texts {
+      display: flex;
+      flex-direction: column;
+      gap: max(30px, 1.5vw);
+
+      .satoshi56 {
+        width: 100%;
+      }
+
+      .satoshi16 {
+        width: 80%;
+        text-align: center;
+      }
+    }
+
+    a {
+        position: absolute;
+        left: max(30px, 1.5vw);
+        top: max(33px, 1.55vw);
+        display: flex;
+        align-items: center;
+        gap: max(10px, 1vw);
+        color: rgba(61, 61, 70, 1);
+        .arrowleft {
+            width: max(6px, 0.3vw);
+            transform: translateY(-25%);
+            content: url('../../../assets/shared/arrowleft.svg');
+        }
+    }   
+  }
+
+
+    .Guitars__right {
+        width: 50%;
+        aspect-ratio: 1/0.68;
+        display: flex;
+        position: absolute;
+        position: relative;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .Guitars__right__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            // content: url("../../assets/shared/orangeBg.png");
+            background-image: url('../../../assets/shared/orangeBg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .Guitars__right__img__content {
+                width: 60%;
+                content: url('../../../assets/shared/Ibanez.png');
+            }
+        }
+
+        .Guitars__right__circle {
+            position: absolute;
+            width: max(80px, 4vw);
+            height: max(80px, 4vw);
+            transform: translate(50%, 50%);
+            content: url("../../../assets/shared/logoCircle.svg");
+            right: 35%;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .RockStar {
+        .Guitars__left {
+            padding-top: max(30px, 1.5vw);
+            justify-content: start;
+            gap: max(60px, 3vw);
+            .Guitars__left__texts {
+                width: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                text-align: center;
+                  .satoshi16 {
+                    width: 100%;
+                }
+            }
+        }
+
+        .Guitars__right {
+            aspect-ratio: 1/0.77;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .RockStar {
+        display: flex;
+        flex-direction: column;
+        .Guitars__left {
+            padding-top: max(80px, 4vw);
+            justify-content: start;
+            gap: max(30px, 1.5vw);
+            width: 100%;
+        }
+
+        .Guitars__right {
+            width: 100%;
+        }
+    }
+}

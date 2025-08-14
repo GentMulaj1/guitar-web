@@ -1,0 +1,174 @@
+.Footer {
+    margin-top: max(132px, 6.6vw);
+    padding: max(56px, 4vw) max(112px, 8vw) max(30px, 2.1vw) max(112px, 8vw);
+    background-color: rgba(238, 238, 238, 1);
+    display: flex;
+    flex-direction: column;
+
+    gap: max(80px, 4vw);
+
+    .Footer__Top {
+        display: flex;
+        justify-content: space-between;
+        gap: max(30px, 1.5vw);
+
+
+        .Footer__Top__1 {
+            display: flex;
+            flex-direction: column;
+            gap: max(22px, 1.1vw);
+
+
+            .Footer__Top__Logo {
+                width: max(263px, 13.15vw);
+                height: max(54px, 2.7vw);
+                content: url('../../../assets/shared/FooterLogo.svg');
+            }
+
+            .Footer__Top__1__texts {
+                display: flex;
+                flex-direction: column;
+                gap: max(20px, 1vw);
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: max(20px, 1vw);
+
+                    span {
+                        width: max(24px, 1.2vw);
+                    }
+
+                    .email {
+                        content: url('../../../assets/shared/email.svg');
+                    }
+
+                    .location {
+                        content: url('../../../assets/shared/location.svg');
+                    }
+                }
+            }
+        }
+
+        .Footer__Top__2 {
+            display: flex;
+            gap: max(100px, 5vw);
+            
+            .Footer__Top__2__card {
+                display: flex;
+                flex-direction: column;
+                gap: max(23px, 1.15vw);
+
+                p {
+                    text-transform: uppercase;
+                    color: rgba(18, 18, 18, 1);
+                }
+
+                .Footer__Top__2__card__links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: max(18px, 0.9vw);
+                }
+            }
+            
+            
+        }
+
+        .Footer__Top__3 {
+            display: flex;
+            flex-direction: column;
+            gap: max(15px, 0.75vw);
+
+            p {
+                text-transform: uppercase;
+                color: rgba(18, 18, 18, 1);
+            }
+
+            .Footer__Top__3__socials {
+                display: flex;
+                align-items: center;
+                gap: max(32px, 1.6vw);
+
+                span {
+                    width: max(32px, 1.6vw);
+                }
+
+                .Footer__facebook {
+                    content: url('../../../assets/shared/Facebook.svg');
+                }
+
+                .Footer__twitter {
+                    content: url('../../../assets/shared/Twitter.svg');
+                }
+
+                .Footer__instagram {
+                    content: url('../../../assets/shared/Instagram.svg');
+                }
+            }
+
+
+
+
+        }
+    }
+
+    .Footer__CopyRight {
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
+
+@media (max-width: 992px) {
+    .Footer {
+        padding: max(30px, 1.5vw) max(40px, 2vw);
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer {
+        .Footer__Top {
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // text-align: center;
+
+            .Footer__Top__1 {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+              .Footer__Top__3 {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .Footer {
+        .Footer__Top {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .Footer__Top__1 {
+                flex-direction: column;
+                justify-content: space-between;
+
+                .Footer__Top__Logo{
+                    width: max(200px, 10vw);
+                }
+            }
+
+              .Footer__Top__3 {
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}

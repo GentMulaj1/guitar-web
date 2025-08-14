@@ -1,0 +1,91 @@
+.Selection {
+    margin-top: max(72px, 3.6vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .Selection__filter__and__search {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: max(17px, 0.85vw);
+        margin-top: max(56px, 2.8vw);
+        width: 100%;
+        padding: 0 max(60px, 6vw);
+
+    }
+
+    .GuitarsInfinit {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        gap: max(40px, 2vw);
+        width: 100%;
+        padding: 0 max(60px, 6vw);
+        margin-top: max(90px, 4.5vw);
+
+
+       
+    }
+
+     .see-more-btn {
+            width: max(150px, 7.5vw);
+            height: max(50px, 2.5vw);
+            border-radius: max(12px, 0.6vw);
+            outline: none;
+            background-color: #fff;
+            border: 1px solid rgba(146, 146, 163, 1);
+            cursor: pointer;
+            margin-top: max(50px, 2.5vw);
+            &:hover {
+                color: rgba(255, 140, 96, 1);
+                border-color: rgba(255, 140, 96, 1);
+
+            }
+            
+
+        }
+}
+
+
+@media (max-width: 992px) {
+    .Selection {
+            .Selection__filter__and__search {
+                padding: 0 max(20px, 1vw);
+
+            }
+
+  .GuitarsInfinit {
+                padding: 0 max(20px, 1vw);
+
+
+       
+    }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .Selection {
+        .GuitarsInfinit {
+        grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .Selection {
+        .GuitarsInfinit {
+            gap: max(20px, 1vw);
+
+            .GuitarCard {
+                gap: max(20px, 1vw);
+            }
+        }
+    }
+
+}

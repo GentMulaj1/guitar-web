@@ -1,0 +1,94 @@
+.FavoriteGuitars {
+  margin-top: max(165px, 8.25vw);
+  padding: 0 max(134px, 6.7vw);
+  display: flex;
+  gap: max(120px, 6vw);
+  justify-content: center;
+
+  .FavoriteGuitars__Left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: max(60px, 3vw);
+
+    .FavoriteGuitars__title {
+      text-align: center;
+      width: max(484px, 24.2vw);
+      margin-left: max(-40px, -2vw);
+    }
+
+    .FavoriteGuitars__Left__apps {
+      display: flex;
+      align-items: center;
+      gap: max(25px, 1.25vw);
+
+      span {
+        width: max(192px, 9.6vw);
+      }
+
+      .googleplay {
+        content: url("../../../assets/Home/FavoriteGuitars/googleplay.svg");
+      }
+
+      .appstore {
+        content: url("../../../assets/Home/FavoriteGuitars/appstore.svg");
+      }
+
+      @media (max-width: 300px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .FavoriteGuitars__Right {
+    width: max(568px, 28.4vw);
+    min-width: 450px;
+    aspect-ratio: 1/0.93;
+    background-image: url("../../../assets/Home/FavoriteGuitars/phones.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 992px) {
+  .FavoriteGuitars {
+    padding: 0 max(50px, 2.5vw);
+    gap: max(20px, 1.5vw);
+
+    .FavoriteGuitars__Left {
+      gap: max(40px, 2vw);
+
+      .FavoriteGuitars__title {
+        width: 100%;
+        font-size: max(30px, 1.5vw);
+      }
+
+      .FavoriteGuitars__Left__apps {
+        span {
+          width: max(110px, 5.5vw);
+        }
+      }
+    }
+
+    .FavoriteGuitars__Right {
+      width: 50%;
+      min-width: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .FavoriteGuitars {
+    padding: 0 max(20px, 1vw);
+    flex-direction: column;
+    .FavoriteGuitars__Left {
+      width: 100%;
+    }
+    .FavoriteGuitars__Right {
+      width: 100%;
+    }
+  }
+}
