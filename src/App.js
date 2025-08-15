@@ -8,15 +8,12 @@ import GuitarDetail from './pages/GuitarDetail/GuitarDetail';
 function App() {
   return (
     <div className="App">
+
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/guitars" element={<Guitars />} />
-          <Route path="/guitar" element={<GuitarDetail />} />
-
-        
-
+          <Route path="/guitars/:name/:id" element={<Guitars />} />
+          <Route path="/guitar/:brandName/:brandId/:modelId" element={<GuitarDetail />} />
         </Routes>
-      <Footer />
 
 
     </div>

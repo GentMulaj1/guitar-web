@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./SpecAndWhoPlay.scss";
 import Specification from "../Specification/Specification";
 import WhoPlaysIt from "../WhoPlaysIt/WhoPlaysIt";
+import { useFindUniqueModel } from "../../../hooks/useFindUniqueModel";
 
-const SpecAndWhoPlay = () => {
+const SpecAndWhoPlay = ({specification, whoplaysit, description}) => {
   const [activeTab, setActiveTab] = useState("specification");
 
   return (
@@ -28,8 +29,21 @@ const SpecAndWhoPlay = () => {
       </div>
 
       <div className="SpecAndWhoPlay__pages">
-        {activeTab === "specification" && <Specification />}
-        {activeTab === "who__plays__it" && <WhoPlaysIt />}
+        {activeTab === "specification" &&
+            <Specification
+              key={specification.id}
+              description={description}
+              bodyWood={specification.bodyWood}
+              bridge={specification.bridge}
+              fingerboardWood={specification.fingerboardWood}
+              neckWood={specification.neckWood}
+              pickups={specification.pickups}
+              scaleLength={specification.scaleLength}
+              tuners={specification.tuners}
+            />
+        }
+
+        {activeTab === "who__plays__it" && <WhoPlaysIt musicians={whoplaysit}/>}
       </div>
     </div>
   );

@@ -1,50 +1,54 @@
 import React from "react";
 import "./Specification.scss";
 
-const Specification = () => {
+const Specification = ({
+  description,
+  bodyWood,
+  bridge,
+  fingerboardWood,
+  neckWood,
+  pickups,
+  scaleLength,
+  tuners,
+}) => {
   return (
     <div className="Specification">
-      <p className="satoshi24light">
-        The Active Precision Bass® PH V guitar is a modern take on the classic
-        Precision Bass design, featuring a sleek body shape and a comfortable
-        neck profile for easy playability. It is equipped with dual active
-        pickups that deliver a powerful and versatile tone, perfect for any
-        genre from rock to funk. The onboard EQ allows players to shape their
-        sound with precision, while the high-quality hardware ensures
-        reliability on stage. With its striking finish options and attention to
-        detail, the Active Precision Bass® PH V is designed for both performance
-        and style.
-      </p>
+      <p className="satoshi24light">{description}</p>
 
       <ul className="Specification__ul">
         <li>
           <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">"{bodyWood}"</p>
         </li>
 
         <li>
-          <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">Neck Wood:</p>
+          <p className="satoshi24light">"{neckWood}"</p>
         </li>
 
         <li>
-          <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">Fingerboard:</p>
+          <p className="satoshi24light">"{fingerboardWood}"</p>
         </li>
 
         <li>
-          <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">Pickups:</p>
+          <p className="satoshi24light">"{pickups}"</p>
         </li>
 
         <li>
-          <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">Tuners:</p>
+          <p className="satoshi24light">"{tuners}"</p>
         </li>
 
         <li>
-          <p className="satoshi24light">Body Wood:</p>
-          <p className="satoshi24light">"Alder"</p>
+          <p className="satoshi24light">Scale Length:</p>
+          <p className="satoshi24light">"{scaleLength}"</p>
+        </li>
+
+        <li>
+          <p className="satoshi24light">Bridge:</p>
+          <p className="satoshi24light">"{bridge}"</p>
         </li>
       </ul>
     </div>

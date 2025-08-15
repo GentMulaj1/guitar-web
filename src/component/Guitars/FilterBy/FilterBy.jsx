@@ -1,27 +1,26 @@
 import { useState } from 'react';
-import './FilterBy.scss'
+import './FilterBy.scss';
 
-const FilterBy = () => {
-  const [isOpen, setIsOpen] = useState(false); 
-  const [selectedFilter, setSelectedFilter] = useState('Filter by Type');
+const FilterBy = ({ selectedFilter, onFilterChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const options = ["Type" ,'Price', 'Newest', 'Oldest'];
+  const options = ["Type", "Price", "Newest", "Oldest"];
 
   const handleToggle = () => {
     setIsOpen(prev => !prev);
   };
 
   const handleOptionClick = (option) => {
-    setSelectedFilter(`Filter by ${option}`);
+    onFilterChange(option);
     setIsOpen(false);
   };
 
   return (
     <div className='FilterBy'>
       <div className="FilterBy__first" onClick={handleToggle}>
-        <span className="FilterBy__filter"/>
-        <p className="cc28">{selectedFilter}</p>
-        <span className="FilterBy__arrow"/>
+        <span className="FilterBy__filter" />
+        <p className="cc28">Filter by {selectedFilter}</p>
+        <span className="FilterBy__arrow" />
       </div>
 
       {isOpen && (
@@ -37,10 +36,8 @@ const FilterBy = () => {
           ))}
         </div>
       )}
-
-
     </div>
-  )
-}
+  );
+};
 
-export default FilterBy
+export default FilterBy;

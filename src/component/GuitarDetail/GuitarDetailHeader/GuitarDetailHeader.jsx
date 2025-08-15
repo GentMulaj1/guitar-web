@@ -1,9 +1,11 @@
 import React from "react";
 import "./GuitarDetailHeader.scss";
 import Logo from "../../shared/Logo/Logo";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const GuitarDetailHeader = () => {
+const GuitarDetailHeader = ({guitarImg}) => {
+  const { brandId, brandName } = useParams();
+
   return (
     <div className="GuitarDetailHeader">
       <div className="Guitars__left">
@@ -12,7 +14,7 @@ const GuitarDetailHeader = () => {
           <p className="satoshi56">Active Precision Bass® PH V</p>
         </div>
 
-        <Link to="/" className="cc16">
+        <Link to={`/guitars/${brandName}/${brandId}`} className="cc16">
           <span className="arrowleft"></span>
           Back to List
         </Link>
@@ -20,7 +22,11 @@ const GuitarDetailHeader = () => {
 
       <div className="Guitars__right">
         <div className="Guitars__right__img">
-          <div className="Guitars__right__img__content" />
+          <div className="Guitars__right__img__content"
+            style={{
+              content: `url(${guitarImg})`
+            }}
+          />
         </div>
         <span className="Guitars__right__circle" />
       </div>
