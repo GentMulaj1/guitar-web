@@ -1,7 +1,6 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Home from './pages/Home/Home';
-import Footer from './component/shared/Footer/Footer';
 import Guitars from './pages/Guitars/Guitars';
 import GuitarDetail from './pages/GuitarDetail/GuitarDetail';
 

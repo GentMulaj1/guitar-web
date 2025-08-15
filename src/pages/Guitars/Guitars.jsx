@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 
 const Guitars = () => {
 
-    const { error, loading, data } = useFindAllBrands();
+    const { error, loading } = useFindAllBrands();
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
